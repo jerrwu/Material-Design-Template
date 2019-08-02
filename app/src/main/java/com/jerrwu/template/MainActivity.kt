@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         users.add("user2")
         users.add("user3")
 
-        val obj_adapter = CustomAdapter(users)
+        val objAdapter = CustomAdapter(users)
 
         rv.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
-        rv.adapter = obj_adapter
+        rv.adapter = objAdapter
     }
 }
