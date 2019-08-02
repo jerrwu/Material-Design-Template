@@ -4,6 +4,10 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def date = new Date()
+def formattedDate = date.format('yyMMdd')
+def code = formattedDate.toInteger()
+
 android {
     compileSdkVersion 28
     buildToolsVersion "29.0.0"
@@ -11,8 +15,8 @@ android {
         applicationId "com.jerrwu.template"
         minSdkVersion 26
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode code
+        versionName "0.1.0" + formattedDate
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
