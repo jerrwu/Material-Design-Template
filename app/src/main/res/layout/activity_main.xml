@@ -8,17 +8,15 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv"
+    <FrameLayout
+            android:id="@+id/frag_container"
             android:clipToPadding="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/toolbar_top"
             android:layout_above="@id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical" />
+            android:layout_height="match_parent" />
 
 
     <android.support.design.widget.FloatingActionButton
@@ -42,7 +40,7 @@
 
         <ImageButton
                 android:layout_gravity="start"
-                android:tint="@color/dark_grey"
+                android:tint="@color/darkGrey"
                 android:background="@color/white"
                 android:src="@drawable/ic_account"
                 android:layout_width="36dp"
@@ -55,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_title"
-                android:textColor="@color/dark_grey"
+                android:textColor="@color/darkGrey"
                 android:fontFamily="@font/productsansmedium"
                 android:textSize="20sp"
                 android:layout_gravity="center"
@@ -65,7 +63,7 @@
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:tint="@color/dark_grey"
+                android:tint="@color/darkGrey"
                 android:background="@color/white"
                 android:src="@drawable/ic_settings"
                 android:layout_width="36dp"

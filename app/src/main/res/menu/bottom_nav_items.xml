@@ -12,7 +12,7 @@
         />
 
     <item
-        android:id="@+id/menu_notifications"
+        android:id="@+id/menu_messages"
         android:title="@string/menu_messages"
         android:icon="@drawable/ic_message" />
 </menu>
