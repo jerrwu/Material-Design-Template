@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v7.preference.SwitchPreferenceCompat
-        android:defaultValue="false"
+    <ListPreference
         android:key="@string/dark_toggle_key"
+        android:entries="@array/dark_mode"
+        android:entryValues="@array/dark_mode_values"
+        android:defaultValue="2"
         android:summary="@string/dark_toggle_summary"
         android:title="@string/dark_toggle_title" />
 
