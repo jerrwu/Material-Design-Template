@@ -11,9 +11,6 @@ import androidx.preference.PreferenceManager
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
         val darkToggle = sharedPreferences.getString("dark_toggle", "2")?.toInt()
@@ -23,6 +20,9 @@ class MainActivity : AppCompatActivity() {
             1 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             2 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
         sharedPreferences.registerOnSharedPreferenceChangeListener(darkModeListener)
 
