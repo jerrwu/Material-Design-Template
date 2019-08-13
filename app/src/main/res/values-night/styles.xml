@@ -7,9 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/colorText</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:colorEdgeEffect">@color/darkGrey</item>
+        <item name="android:colorEdgeEffect">@color/colorSecondary</item>
         <item name="windowActionBar">false</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
         <item name="windowNoTitle">true</item>

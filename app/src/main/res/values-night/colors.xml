@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <color name="colorPrimary">#121212</color>
     <color name="colorAccent">#80B4FF</color>
-    <color name="white">#363636</color>
-    <color name="black">#121212</color>
-    <color name="darkGrey">#F0F0F0</color>
-
+    <color name="colorMain">#242424</color>
+    <color name="colorText">#0A0A0A</color>
+    <color name="colorSecondary">#F0F0F0</color>
+    <color name="bottomNavColor">#363636</color>
 </resources>

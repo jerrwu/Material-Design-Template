@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/colorMain"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
@@ -15,11 +15,11 @@
         android:layout_width="match_parent"
         android:minHeight="?attr/actionBarSize"
         android:elevation="1dp"
-        android:background="@color/white">
+        android:background="@color/colorMain">
         
         <ImageButton
             android:id="@+id/settingsBackButton"
-            android:tint="@color/darkGrey"
+            android:tint="@color/colorSecondary"
             android:foregroundGravity="left"
             android:src="@drawable/ic_back"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -29,7 +29,7 @@
         <TextView
             android:paddingStart="20dp"
             android:textSize="20sp"
-            android:textColor="@color/darkGrey"
+            android:textColor="@color/colorSecondary"
             android:fontFamily="@font/productsansmedium"
             android:text="@string/settings"
             android:gravity="start"

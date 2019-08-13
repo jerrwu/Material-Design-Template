@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO)
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
