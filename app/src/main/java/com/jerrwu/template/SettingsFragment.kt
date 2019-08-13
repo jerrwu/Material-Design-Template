@@ -1,7 +1,6 @@
 package com.jerrwu.template
 
 
-import android.R.attr.*
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
@@ -10,7 +9,6 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceManager
 import android.content.pm.PackageManager
-import android.content.pm.PackageInfo
 
 
 class SettingsFragment : PreferenceFragmentCompat() {
