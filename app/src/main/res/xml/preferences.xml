@@ -5,7 +5,7 @@
         android:entries="@array/dark_mode"
         android:entryValues="@array/dark_mode_values"
         android:defaultValue="2"
-        android:summary="@string/dark_toggle_summary"
+        android:summary=""
         android:title="@string/dark_toggle_title" />
 
     <Preference
@@ -17,4 +17,9 @@
         android:key="github"
         android:title="Github"
         android:summary="Visit the Github repo for this project"/>
+
+    <Preference
+        android:key="version"
+        android:title="Template version"
+        android:summary=""/>
 </PreferenceScreen>

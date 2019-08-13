@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        sharedPreferences.registerOnSharedPreferenceChangeListener(darkModeListener)
-
         settingsButton.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
@@ -39,17 +37,4 @@ class MainActivity : AppCompatActivity() {
         PreferenceManager
             .setDefaultValues(this, R.xml.preferences, false)
     }
-
-    var darkModeListener: SharedPreferences.OnSharedPreferenceChangeListener =
-        SharedPreferences.OnSharedPreferenceChangeListener {sharedPreferences, key ->
-            if (key == "dark_toggle") {
-                val darkToggle = sharedPreferences.getString(key, "2")?.toInt()
-                when (darkToggle) {
-                    -1 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                    0 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-                    1 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                    2 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                }
-            }
-        }
 }
