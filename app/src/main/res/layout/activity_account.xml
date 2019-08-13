@@ -38,4 +38,18 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <RelativeLayout
+        android:layout_below="@id/toolbar_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_margin="40dp"
+            android:tint="@color/colorSecondary"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_face"
+            android:layout_width="96dp"
+            android:layout_height="96dp" />
+    </RelativeLayout>
+
 </RelativeLayout>
