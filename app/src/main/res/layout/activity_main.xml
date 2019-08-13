@@ -19,7 +19,7 @@
             android:layout_height="match_parent" />
 
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             android:tint="@color/colorMain"
             app:srcCompat="@drawable/ic_plus" />
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
             app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/toolbar_top"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_gravity="start"
             android:tint="@color/colorSecondary"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_account"
+            app:srcCompat="@drawable/ic_account"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginStart="16dp"
@@ -69,13 +69,13 @@
             android:layout_marginStart="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:tint="@color/colorSecondary"
-            android:src="@drawable/ic_settings"
+            app:srcCompat="@drawable/ic_settings"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:contentDescription="@string/settings"/>
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
-    <android.support.design.widget.BottomNavigationView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:theme="@style/Widget.BottomNavigationView"
         android:background="@color/bottomNavColor"
         app:itemIconTint="@drawable/navbar_color_selector"
