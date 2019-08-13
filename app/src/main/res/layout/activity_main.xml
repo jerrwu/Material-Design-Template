@@ -41,7 +41,7 @@
             android:background="@color/colorMain">
 
         <ImageButton
-            android:id="@+id/account_button"
+            android:id="@+id/accountButton"
             android:layout_gravity="start"
             android:tint="@color/colorSecondary"
             android:background="?attr/selectableItemBackgroundBorderless"

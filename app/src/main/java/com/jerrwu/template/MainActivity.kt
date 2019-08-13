@@ -31,6 +31,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        accountButton.setOnClickListener {
+            val intent = Intent(this, AccountActivity::class.java)
+            startActivity(intent)
+        }
+
         PreferenceManager
             .setDefaultValues(this, R.xml.preferences, false)
     }
