@@ -7,9 +7,58 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
+import android.view.MenuItem
+import androidx.annotation.NonNull
+import androidx.fragment.app.Fragment
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat.setBackgroundTintList
+import android.R.attr.colorPrimaryDark
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
+
 
 
 class MainActivity : AppCompatActivity() {
+    val fragment1: Fragment = StartFragment()
+    val fragment2: Fragment = CentreFragment()
+    val fragment3: Fragment = EndFragment()
+    val fm = supportFragmentManager
+    var active = fragment1
+
+    private val mOnNavigationItemSelectedListener =
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+
+                R.id.menu_home -> {
+                    fm.beginTransaction()
+                        .hide(active)
+                        .show(fragment1)
+                        .commit()
+                    active = fragment1
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.menu_search -> {
+                    fm.beginTransaction()
+                        .hide(active)
+                        .show(fragment2)
+                        .commit()
+                    active = fragment2
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.menu_messages -> {
+                    fm.beginTransaction()
+                        .hide(active)
+                        .show(fragment3)
+                        .commit()
+                    active = fragment3
+                    return@OnNavigationItemSelectedListener true
+                }
+            }
+            false
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
@@ -23,6 +72,15 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        fm.beginTransaction().add(R.id.frag_container, fragment3, "3").hide(fragment3).commit()
+        fm.beginTransaction().add(R.id.frag_container, fragment2, "2").hide(fragment2).commit()
+        fm.beginTransaction().add(R.id.frag_container, fragment1, "1").commit()
+
+        bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        if (savedInstanceState == null) {
+            bottom_navigation.selectedItemId = R.id.menu_home
+        }
 
         settingsButton.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
@@ -38,3 +96,4 @@ class MainActivity : AppCompatActivity() {
             .setDefaultValues(this, R.xml.preferences, false)
     }
 }
+
