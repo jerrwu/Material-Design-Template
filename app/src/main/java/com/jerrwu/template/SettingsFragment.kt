@@ -2,14 +2,13 @@ package com.jerrwu.template
 
 
 import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.os.Bundle
-import androidx.preference.PreferenceFragmentCompat
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.ListPreference
 import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
-import android.content.pm.PackageManager
-import androidx.core.app.ActivityCompat.recreate
 
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -33,7 +32,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         try {
-            val pInfo = context?.getPackageManager()?.getPackageInfo(activity?.packageName, 0)
+            val pInfo = context?.packageManager?.getPackageInfo(activity?.packageName, 0)
             versionStr = pInfo?.versionName.toString()
         } catch (e: PackageManager.NameNotFoundException) {
             e.printStackTrace()

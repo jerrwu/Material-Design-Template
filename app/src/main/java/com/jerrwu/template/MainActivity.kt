@@ -1,20 +1,13 @@
 package com.jerrwu.template
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
-import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.preference.PreferenceManager
-import android.view.MenuItem
-import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat.setBackgroundTintList
-import android.R.attr.colorPrimaryDark
-import android.view.View
+import androidx.preference.PreferenceManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
