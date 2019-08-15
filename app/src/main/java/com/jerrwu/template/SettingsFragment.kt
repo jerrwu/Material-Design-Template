@@ -9,6 +9,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceManager
 import android.content.pm.PackageManager
+import androidx.core.app.ActivityCompat.recreate
 
 
 class SettingsFragment : PreferenceFragmentCompat() {

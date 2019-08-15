@@ -13,9 +13,8 @@ import androidx.fragment.app.Fragment
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat.setBackgroundTintList
 import android.R.attr.colorPrimaryDark
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -73,14 +72,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        for (fragment in fm.fragments) {
+            fm.beginTransaction().remove(fragment).commit()
+        }
+
         fm.beginTransaction().add(R.id.frag_container, fragment3, "3").hide(fragment3).commit()
         fm.beginTransaction().add(R.id.frag_container, fragment2, "2").hide(fragment2).commit()
         fm.beginTransaction().add(R.id.frag_container, fragment1, "1").commit()
 
         bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        if (savedInstanceState == null) {
-            bottom_navigation.selectedItemId = R.id.menu_home
-        }
+        bottom_navigation.selectedItemId = R.id.menu_home
 
         settingsButton.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
