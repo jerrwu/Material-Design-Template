@@ -11,15 +11,15 @@
     <Preference
         android:key="feedback"
         android:title="Send feedback"
-        android:summary="Report technical issues or suggest new features"/>
+        android:summary="Report technical issues or suggest new features" />
 
     <Preference
         android:key="github"
         android:title="Github"
-        android:summary="Visit the Github repo for this project"/>
+        android:summary="Visit the Github repo for this project" />
 
     <Preference
         android:key="version"
         android:title="Template version"
-        android:summary=""/>
+        android:summary="" />
 </PreferenceScreen>
