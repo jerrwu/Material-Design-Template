@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     val fragment1: Fragment = StartFragment()
     val fragment2: Fragment = CentreFragment()
     val fragment3: Fragment = EndFragment()
+    val navSheetFragment: BottomSheetDialogFragment = NavSheetFragment()
     val fm = supportFragmentManager
     var active = fragment1
 
@@ -52,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     private fun showBottomSheetDialogFragment() {
-        val navSheetFragment = NavSheetFragment()
         navSheetFragment.show(fm, navSheetFragment.tag)
     }
 
