@@ -7,8 +7,10 @@
     android:orientation="vertical"
     app:behavior_hideable="true"
     app:behavior_peekHeight="56dp"
-    android:padding="36dp"
-    android:fitsSystemWindows="true"
+    android:paddingTop="18dp"
+    android:paddingBottom="18dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +29,7 @@
             android:id="@+id/bottom_sheet_account_text_1"
             android:text="User"
             android:layout_marginStart="12dp"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:fontFamily="@font/productsansmedium"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/colorFont"
@@ -43,6 +45,22 @@
             android:fontFamily="@font/productsansmedium"
             app:layout_constraintTop_toBottomOf="@id/bottom_sheet_account_text_1"
             android:textColor="@color/colorSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:textAllCaps="false"
+            android:background="@drawable/round_button_ripple"
+            android:textColor="@color/colorFont"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:minHeight="32dp"
+            android:fontFamily="@font/productsansmedium"
+            app:layout_constraintStart_toStartOf="@id/bottom_sheet_account_text_2"
+            app:layout_constraintTop_toBottomOf="@id/bottom_sheet_account_text_2"
+            android:id="@+id/bottom_sheet_account_button"
+            android:text="Edit Name"
+            style="?android:attr/borderlessButtonStyle"
+            android:elevation="0dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

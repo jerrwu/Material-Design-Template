@@ -7,4 +7,6 @@
     <color name="colorSecondary">#606060</color>
     <color name="bottomNavColor">#FBFBFB</color>
     <color name="colorFont">#131313</color>
+    <color name="colorButton">#FFFFFF</color>
+    <color name="colorTertiary">#AEAEAE</color>
 </resources>
