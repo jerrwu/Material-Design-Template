@@ -51,6 +51,11 @@ class MainActivity : AppCompatActivity() {
             false
         }
 
+    private fun showBottomSheetDialogFragment() {
+        val navSheetFragment = NavSheetFragment()
+        navSheetFragment.show(fm, navSheetFragment.tag)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
@@ -82,8 +87,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         accountButton.setOnClickListener {
-            val intent = Intent(this, AccountActivity::class.java)
-            startActivity(intent)
+            showBottomSheetDialogFragment()
         }
 
         PreferenceManager

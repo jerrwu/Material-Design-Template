@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    android:padding="36dp"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/bottom_sheet_account_ic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_account"
+            android:tint="@color/colorFont"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+        <TextView
+            app:layout_constraintLeft_toRightOf="@id/bottom_sheet_account_ic"
+            android:id="@+id/bottom_sheet_account_text_1"
+            android:text="User"
+            android:layout_marginStart="12dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/productsansmedium"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            app:layout_constraintLeft_toRightOf="@id/bottom_sheet_account_ic"
+            android:id="@+id/bottom_sheet_account_text_2"
+            android:text="User"
+            android:layout_marginStart="12dp"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/productsansmedium"
+            app:layout_constraintTop_toBottomOf="@id/bottom_sheet_account_text_1"
+            android:textColor="@color/colorSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

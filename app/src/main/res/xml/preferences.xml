@@ -8,6 +8,12 @@
         android:summary=""
         android:title="@string/dark_toggle_title" />
 
+    <androidx.preference.EditTextPreference
+        android:key="name"
+        android:title="Name"
+        android:summary="Edit the user's display name"
+        android:defaultValue="User"/>
+
     <Preference
         android:key="feedback"
         android:title="Send feedback"
