@@ -7,13 +7,25 @@
     android:orientation="vertical"
     app:behavior_hideable="true"
     app:behavior_peekHeight="56dp"
-    android:paddingTop="18dp"
+    android:paddingTop="0dp"
     android:paddingBottom="18dp"
-    android:paddingStart="12dp"
-    android:paddingEnd="12dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:id="@+id/bottom_sheet_grabber"
+        android:tint="@color/colorQuad"
+        android:src="@drawable/round_button"
+        android:layout_width="26dp"
+        android:layout_height="4dp"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
@@ -66,12 +78,29 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/line_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="26dp"
+        android:paddingEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/selected_ripple">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:tint="@color/colorSecondary"
+            android:src="@drawable/ic_settings"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
 
     </LinearLayout>
 

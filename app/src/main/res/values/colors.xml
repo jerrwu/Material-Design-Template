@@ -9,4 +9,6 @@
     <color name="colorFont">#131313</color>
     <color name="colorButton">#FFFFFF</color>
     <color name="colorTertiary">#AEAEAE</color>
+    <color name="colorQuad">#E7E7E7</color>
+    <color name="colorSelect">#254285F4</color>
 </resources>

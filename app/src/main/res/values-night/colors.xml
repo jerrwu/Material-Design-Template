@@ -8,5 +8,7 @@
     <color name="bottomNavColor">#363636</color>
     <color name="colorFont">#FEFEFE</color>
     <color name="colorButton">#1F1F1F</color>
-    <color name="colorTertiary">#808080</color>
+    <color name="colorTertiary">#747474</color>
+    <color name="colorQuad">#363636</color>
+    <color name="colorSelect">#2580B4FF</color>
 </resources>
