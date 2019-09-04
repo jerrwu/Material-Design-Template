@@ -2,6 +2,7 @@ package com.jerrwu.template
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     val fragment1: Fragment = StartFragment()
     val fragment2: Fragment = CentreFragment()
     val fragment3: Fragment = EndFragment()
-    val navSheetFragment: BottomSheetDialogFragment = NavSheetFragment()
+    val navSheetFragment = NavSheetFragment()
     val fm = supportFragmentManager
     var active = fragment1
 
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     private fun showBottomSheetDialogFragment() {
-        navSheetFragment.show(fm, navSheetFragment.tag)
+        navSheetFragment.show(supportFragmentManager, navSheetFragment.tag)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
