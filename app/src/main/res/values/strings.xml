@@ -22,4 +22,5 @@
         <item>"2"</item>
     </string-array>
     <string name="dark_toggle_summary">Toggle dark mode for Template</string>
+    <string name="save">Save</string>
 </resources>

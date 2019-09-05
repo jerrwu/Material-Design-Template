@@ -13,5 +13,7 @@ class AccountActivity : AppCompatActivity() {
         accountBackButton.setOnClickListener {
             finish()
         }
+
+        
     }
 }
