@@ -86,8 +86,10 @@
         android:layout_height="2dp"/>
 
     <LinearLayout
+        android:id="@+id/settingsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
         android:paddingStart="26dp"
@@ -100,7 +102,15 @@
             android:src="@drawable/ic_settings"
             android:layout_width="24dp"
             android:layout_height="24dp"/>
-
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginStart="14dp"
+            android:textColor="@color/colorFont"
+            android:fontFamily="@font/productsansmedium"
+            android:text="@string/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

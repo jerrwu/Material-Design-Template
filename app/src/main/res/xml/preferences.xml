@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="editname"
+        android:title="Edit name"/>
+
     <ListPreference
         android:key="@string/dark_toggle_key"
         android:entries="@array/dark_mode"
@@ -11,13 +15,7 @@
     <androidx.preference.EditTextPreference
         android:key="name"
         android:title="Name"
-        android:summary="Edit the user's display name"
         android:defaultValue="User"/>
-
-    <Preference
-        android:key="feedback"
-        android:title="Send feedback"
-        android:summary="Report technical issues or suggest new features" />
 
     <Preference
         android:key="github"

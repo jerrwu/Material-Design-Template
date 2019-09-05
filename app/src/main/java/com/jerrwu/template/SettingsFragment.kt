@@ -5,10 +5,7 @@ import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.preference.ListPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceManager
+import androidx.preference.*
 
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -21,8 +18,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val darkToggle = sharedPreferences.getString("dark_toggle", "2")?.toInt()
         val darkPreference = findPreference("dark_toggle") as ListPreference?
         val versionPreference = findPreference("version") as Preference?
+        val namePreference = findPreference("name") as EditTextPreference?
         var versionStr = "Error"
         sharedPreferences.registerOnSharedPreferenceChangeListener(onPreferenceChangeListener)
+
+        preferenceScreen.removePreference(namePreference)
 
         when (darkToggle) {
             -1 -> darkPreference!!.summary = "Follow System"
