@@ -54,7 +54,7 @@
                 android:layout_alignParentTop="true"
                 android:tint="@color/colorSecondary"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_face"
+                android:src="@drawable/ic_account"
                 android:layout_width="96dp"
                 android:layout_height="96dp" />
 
