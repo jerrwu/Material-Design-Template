@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:windowSoftInputMode="adjustResize|adjustPan"
+            android:windowSoftInputMode="adjustResize|stateHidden"
             android:name=".AccountActivity"/>
         <activity
             android:name=".SettingsActivity"
