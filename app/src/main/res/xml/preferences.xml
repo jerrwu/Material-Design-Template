@@ -2,7 +2,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <Preference
         android:key="editname"
-        android:title="Edit name"/>
+        android:title="Edit name">
+        <intent android:action="com.jerrwu.template.AccountActivity"/>
+        <intent android:targetPackage="com.jerrwu.template"
+            android:targetClass="com.jerrwu.template.AccountActivity"/>
+    </Preference>
 
     <ListPreference
         android:key="@string/dark_toggle_key"
