@@ -12,8 +12,11 @@ import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import android.net.Uri
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 class NavSheetFragment : BottomSheetDialogFragment() {
@@ -31,6 +34,14 @@ class NavSheetFragment : BottomSheetDialogFragment() {
 
         val nameString = prefs.getString("name", "User")
         bottom_sheet_account_text_1.text = nameString
+
+
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("HH")
+        val curHour: String =  current.format(formatter)
+        val greetingString = InfoHelper.getGreeting(curHour)
+        
+        bottom_sheet_account_text_2.text = greetingString
 
         settingsButton.setOnClickListener {
             val intent = Intent(activity, SettingsActivity::class.java)
