@@ -52,6 +52,25 @@ class AccountActivity : AppCompatActivity() {
                             ContextCompat.getColor(applicationContext, R.color.colorMain))
                     }
                 }
+
+                else {
+                    accountSaveButton.isClickable = false
+
+                    if (isUsingNightModeResources()) {
+                        accountSaveButton.backgroundTintList = buttonDisabled
+                        account_check_image.setColorFilter(textDisabled)
+                        account_save_text.setTextColor(textDisabled)
+                    }
+
+                    else {
+                        accountSaveButton.backgroundTintList =
+                            ContextCompat.getColorStateList(applicationContext, R.color.colorQuad)
+                        account_check_image.setColorFilter(
+                            ContextCompat.getColor(applicationContext, R.color.colorTertiary))
+                        account_save_text.setTextColor(
+                            ContextCompat.getColor(applicationContext, R.color.colorTertiary))
+                    }
+                }
             }
         })
 
