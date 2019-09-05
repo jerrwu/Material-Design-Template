@@ -77,4 +77,3 @@
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_items" />
 </RelativeLayout>
-
