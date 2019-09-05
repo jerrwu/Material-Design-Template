@@ -13,6 +13,7 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.preference.PreferenceManager
 import android.util.Log
+import android.view.ViewConfiguration
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import java.time.LocalDateTime
@@ -21,6 +22,12 @@ import java.time.format.DateTimeFormatter
 
 class NavSheetFragment : BottomSheetDialogFragment() {
     private var fragmentView: View? = null
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        (view!!.parent.parent.parent as View).fitsSystemWindows = false
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         fragmentView = inflater.inflate(R.layout.nav_sheet, container, false)
@@ -32,9 +39,12 @@ class NavSheetFragment : BottomSheetDialogFragment() {
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(activity)
 
+        if (InfoHelper.hasNavBar(activity)) {
+            nav_sheet_layout.setPadding(0,0,0,128)
+        }
+
         val nameString = prefs.getString("name", "User")
         bottom_sheet_account_text_1.text = nameString
-
 
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofPattern("HH")
