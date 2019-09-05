@@ -23,4 +23,6 @@
     </string-array>
     <string name="dark_toggle_summary">Toggle dark mode for Template</string>
     <string name="save">Save</string>
+    <string name="documentation">Documentation</string>
+    <string name="help_amp_feedback"><![CDATA[Help & Feedback]]></string>
 </resources>

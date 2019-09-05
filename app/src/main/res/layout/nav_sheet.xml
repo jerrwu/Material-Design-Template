@@ -114,4 +114,62 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/docButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="26dp"
+        android:paddingEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/selected_ripple">
+        <ImageView
+            android:tint="@color/colorSecondary"
+            android:src="@drawable/ic_doc"
+            android:layout_width="22dp"
+            android:layout_height="22dp"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginStart="14dp"
+            android:textColor="@color/colorFont"
+            android:fontFamily="@font/productsansmedium"
+            android:text="@string/documentation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/helpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="26dp"
+        android:paddingEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/selected_ripple">
+        <ImageView
+            android:tint="@color/colorSecondary"
+            android:src="@drawable/ic_question"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginStart="14dp"
+            android:textColor="@color/colorFont"
+            android:fontFamily="@font/productsansmedium"
+            android:text="@string/help_amp_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
 </LinearLayout>

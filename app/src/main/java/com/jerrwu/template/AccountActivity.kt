@@ -8,10 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_account.*
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.preference.PreferenceManager
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import androidx.browser.customtabs.CustomTabsIntent
+import android.net.Uri
+
+
 
 
 class AccountActivity : AppCompatActivity() {
@@ -24,9 +30,19 @@ class AccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
 
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+
         accountBackButton.setOnClickListener {
             finish()
         }
+
+        accountSaveButton.setOnClickListener {
+            val editor = prefs.edit()
+            editor.putString("name", accountEditText.text.toString())
+            editor.apply()
+            finish()
+        }
+        accountSaveButton.isClickable = false
 
         accountEditText.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {}
