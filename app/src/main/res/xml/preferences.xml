@@ -24,7 +24,6 @@
     <Preference
         android:key="github"
         android:title="Github"
-        android:icon="@drawable/ic_github"
         android:summary="Visit the Github repo for this project" />
 
     <Preference
