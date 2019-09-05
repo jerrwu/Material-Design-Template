@@ -40,7 +40,7 @@ class NavSheetFragment : BottomSheetDialogFragment() {
         val formatter = DateTimeFormatter.ofPattern("HH")
         val curHour: String =  current.format(formatter)
         val greetingString = InfoHelper.getGreeting(curHour)
-        
+
         bottom_sheet_account_text_2.text = greetingString
 
         settingsButton.setOnClickListener {
