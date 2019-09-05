@@ -43,7 +43,9 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_margin="40dp"
+            android:id="@+id/account_screen_ic"
+            android:layout_marginTop="168dp"
+            android:layout_alignParentTop="true"
             android:tint="@color/colorSecondary"
             android:layout_centerHorizontal="true"
             android:src="@drawable/ic_face"

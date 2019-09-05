@@ -24,9 +24,15 @@ class NavSheetFragment : BottomSheetDialogFragment() {
             startActivity(intent)
             closeNavSheet()
         }
+
+        bottomSheetAccountButton.setOnClickListener {
+            val intent = Intent(activity, AccountActivity::class.java)
+            startActivity(intent)
+            closeNavSheet()
+        }
     }
 
-    fun closeNavSheet() {
+    private fun closeNavSheet() {
         activity?.supportFragmentManager?.beginTransaction()?.remove(this)?.commit()
     }
 }
