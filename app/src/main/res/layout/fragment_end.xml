@@ -6,9 +6,9 @@
     tools:context=".EndFragment">
 
     <TextView
-        android:text="3"
+        android:text="@string/fragment_3_placeholder"
         android:fontFamily="@font/productsansblack"
-        android:textSize="86sp"
+        android:textSize="42sp"
         android:textColor="@color/colorSecondary"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
