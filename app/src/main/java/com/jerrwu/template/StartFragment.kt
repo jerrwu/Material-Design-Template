@@ -26,7 +26,21 @@ class StartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        for (i in 0..4) {
+        var card1 = Card()
+        card1.id = 0
+        card1.title = "Image card"
+        card1.content = "hie..."
+        card1.ic = R.drawable.image_placeholder
+        cardList.add(card1)
+
+        var card2 = Card()
+        card2.id = 1
+        card2.title = "Non-image card"
+        card2.content = "hi..........................................................................................................................................................................................."
+        card2.ic = 0
+        cardList.add(card2)
+
+        for (i in 2..6) {
             val card = Card()
             card.id = i
             card.ic = R.drawable.ic_plus
