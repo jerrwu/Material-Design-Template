@@ -31,7 +31,7 @@ class StartFragment : Fragment() {
             card.id = i
             card.ic = R.drawable.ic_plus
             card.title = "Title $i"
-            card.content = "kevin qi kevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qikevin qi"
+            card.content = "this is text this is text this is text this is text this is text this is text this is text this is text this is text this is text this is text this is text "
             cardList.add(card)
         }
 
