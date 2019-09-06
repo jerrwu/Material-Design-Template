@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class CardAdapter(private val mDataList: ArrayList<Card>) : RecyclerView.Adapter<CardAdapter.MyViewHolder>() {
+    var onItemClick: ((Card) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card, parent, false)
@@ -40,5 +41,11 @@ class CardAdapter(private val mDataList: ArrayList<Card>) : RecyclerView.Adapter
         internal var cardIc: ImageView = itemView.findViewById<View>(R.id.card_ic) as ImageView
         internal var cardIcHolder: CardView = itemView.findViewById<View>(R.id.card_ic_holder) as CardView
         internal var cardTextContainer: ConstraintLayout = itemView.findViewById<View>(R.id.card_text_container) as ConstraintLayout
+
+        init {
+            itemView.setOnClickListener {
+                onItemClick?.invoke(mDataList[adapterPosition])
+            }
+        }
     }
 }

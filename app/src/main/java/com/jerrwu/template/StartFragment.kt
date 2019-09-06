@@ -2,9 +2,11 @@ package com.jerrwu.template
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -54,6 +56,9 @@ class StartFragment : Fragment() {
         mRecyclerView!!.layoutManager = mLayoutManager
         mAdapter = CardAdapter(cardList)
         mRecyclerView!!.adapter = mAdapter
+        (mAdapter as CardAdapter).onItemClick = { card ->
+            Toast.makeText(activity, card.id.toString(), Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
