@@ -29,4 +29,5 @@
     <string name="fragment_3_placeholder">fragment 3</string>
     <string name="title_placeholder">this is a title</string>
     <string name="content_placeholder">this is content text</string>
+    <string name="section_1">SECTION 1</string>
 </resources>

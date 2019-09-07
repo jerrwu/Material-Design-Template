@@ -3,10 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CentreFragment">
 
+    <TextView
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        android:fontFamily="@font/productsansmedium"
+        android:textColor="@color/colorSecondary"
+        android:text="@string/section_1"
+        android:id="@+id/section1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <HorizontalScrollView
+        android:layout_below="@id/section1Text"
         android:scrollbars="none"
         android:id="@+id/horizontalScroll"
         android:layout_width="match_parent"
@@ -15,15 +28,17 @@
         <LinearLayout
             android:id="@+id/horizontalScrollContainer"
             android:clipToPadding="false"
-            android:padding="12dp"
+            android:padding="14dp"
             android:orientation="horizontal"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <com.google.android.material.card.MaterialCardView
                 app:cardCornerRadius="6dp"
                 app:strokeColor="@color/colorQuad"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
                 app:strokeWidth="0.8dp"
-                android:layout_width="118dp"
+                android:layout_width="128dp"
                 android:layout_height="128dp">
 
                 <ImageView
@@ -45,11 +60,11 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 app:cardCornerRadius="6dp"
                 app:strokeColor="@color/colorQuad"
                 app:strokeWidth="0.8dp"
-                android:layout_width="118dp"
+                android:layout_width="128dp"
                 android:layout_height="128dp">
 
                 <ImageView
@@ -71,11 +86,11 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 app:cardCornerRadius="6dp"
                 app:strokeColor="@color/colorQuad"
                 app:strokeWidth="0.8dp"
-                android:layout_width="118dp"
+                android:layout_width="128dp"
                 android:layout_height="128dp">
 
                 <ImageView
@@ -97,11 +112,11 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 app:cardCornerRadius="6dp"
                 app:strokeColor="@color/colorQuad"
                 app:strokeWidth="0.8dp"
-                android:layout_width="118dp"
+                android:layout_width="128dp"
                 android:layout_height="128dp">
 
                 <ImageView
@@ -123,11 +138,11 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 app:cardCornerRadius="6dp"
                 app:strokeColor="@color/colorQuad"
                 app:strokeWidth="0.8dp"
-                android:layout_width="118dp"
+                android:layout_width="128dp"
                 android:layout_height="128dp">
 
                 <ImageView
