@@ -30,4 +30,5 @@
     <string name="title_placeholder">this is a title</string>
     <string name="content_placeholder">this is content text</string>
     <string name="section_1">SECTION 1</string>
+    <string name="section_2">SECTION 2</string>
 </resources>

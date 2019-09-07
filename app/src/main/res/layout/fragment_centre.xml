@@ -166,4 +166,16 @@
 
     </HorizontalScrollView>
 
+    <TextView
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        android:layout_below="@id/horizontalScroll"
+        android:fontFamily="@font/productsansmedium"
+        android:textColor="@color/colorSecondary"
+        android:text="@string/section_2"
+        android:id="@+id/section2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>
