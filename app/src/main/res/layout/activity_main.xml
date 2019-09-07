@@ -42,7 +42,7 @@
 
         <ImageButton
             android:id="@+id/accountButton"
-            android:layout_gravity="start"
+            android:layout_gravity="end"
             android:tint="@color/colorSecondary"
             android:background="?attr/selectableItemBackgroundBorderless"
             app:srcCompat="@drawable/ic_account"

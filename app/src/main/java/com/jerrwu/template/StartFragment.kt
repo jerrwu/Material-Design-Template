@@ -38,7 +38,7 @@ class StartFragment : Fragment() {
         var card2 = Card()
         card2.id = 1
         card2.title = "Non-image card"
-        card2.content = "hi..........................................................................................................................................................................................."
+        card2.content = "a really long test string a really long test string a really long test string a really long test string a really long test string a really long test string a really long test string a really long test string a really long test string a really long test string "
         card2.ic = 0
         cardList.add(card2)
 
