@@ -11,4 +11,8 @@
     <color name="colorTertiary">#747474</color>
     <color name="colorQuad">#363636</color>
     <color name="colorSelect">#2580B4FF</color>
+    <color name="red">#FF7762</color>
+    <color name="green">#55CF86</color>
+    <color name="purple">#BB86FC</color>
+    <color name="yellow">#FFF176</color>
 </resources>

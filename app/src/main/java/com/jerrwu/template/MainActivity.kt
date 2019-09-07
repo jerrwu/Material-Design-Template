@@ -2,6 +2,7 @@ package com.jerrwu.template
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                         .show(fragment1)
                         .commit()
                     active = fragment1
+                    searchButton.visibility = View.GONE
                     return@OnNavigationItemSelectedListener true
                 }
 
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                         .show(fragment2)
                         .commit()
                     active = fragment2
+                    searchButton.visibility = View.VISIBLE
                     return@OnNavigationItemSelectedListener true
                 }
 
@@ -49,6 +52,7 @@ class MainActivity : AppCompatActivity() {
                         .show(fragment3)
                         .commit()
                     active = fragment3
+                    searchButton.visibility = View.GONE
                     return@OnNavigationItemSelectedListener true
                 }
             }

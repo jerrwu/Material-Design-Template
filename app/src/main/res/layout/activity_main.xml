@@ -52,6 +52,19 @@
             android:layout_marginEnd="16dp"
             android:contentDescription="@string/account" />
 
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/searchButton"
+            android:layout_gravity="start"
+            android:tint="@color/colorSecondary"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_magnify"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/account" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

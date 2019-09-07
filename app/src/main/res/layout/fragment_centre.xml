@@ -3,15 +3,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CentreFragment">
 
-    <TextView
-        android:text="@string/fragment_2_placeholder"
-        android:fontFamily="@font/productsansblack"
-        android:textSize="42sp"
-        android:textColor="@color/colorSecondary"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:id="@+id/horizontalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="152dp">
+
+        <LinearLayout
+            android:id="@+id/horizontalScrollContainer"
+            android:clipToPadding="false"
+            android:padding="12dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="6dp"
+                app:strokeColor="@color/colorQuad"
+                app:strokeWidth="0.8dp"
+                android:layout_width="118dp"
+                android:layout_height="128dp">
+
+                <ImageView
+                    android:layout_gravity="top"
+                    android:src="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"/>
+
+                <TextView
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="78dp"
+                    android:text="Tile 1"
+                    android:fontFamily="@font/productsansregular"
+                    android:textColor="@color/colorFont"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="6dp"
+                app:strokeColor="@color/colorQuad"
+                app:strokeWidth="0.8dp"
+                android:layout_width="118dp"
+                android:layout_height="128dp">
+
+                <ImageView
+                    android:layout_gravity="top"
+                    android:src="@color/red"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"/>
+
+                <TextView
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="78dp"
+                    android:text="Tile 2"
+                    android:fontFamily="@font/productsansregular"
+                    android:textColor="@color/colorFont"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="6dp"
+                app:strokeColor="@color/colorQuad"
+                app:strokeWidth="0.8dp"
+                android:layout_width="118dp"
+                android:layout_height="128dp">
+
+                <ImageView
+                    android:layout_gravity="top"
+                    android:src="@color/green"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"/>
+
+                <TextView
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="78dp"
+                    android:text="Tile 3"
+                    android:fontFamily="@font/productsansregular"
+                    android:textColor="@color/colorFont"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="6dp"
+                app:strokeColor="@color/colorQuad"
+                app:strokeWidth="0.8dp"
+                android:layout_width="118dp"
+                android:layout_height="128dp">
+
+                <ImageView
+                    android:layout_gravity="top"
+                    android:src="@color/purple"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"/>
+
+                <TextView
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="78dp"
+                    android:text="Tile 4"
+                    android:fontFamily="@font/productsansregular"
+                    android:textColor="@color/colorFont"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="6dp"
+                app:strokeColor="@color/colorQuad"
+                app:strokeWidth="0.8dp"
+                android:layout_width="118dp"
+                android:layout_height="128dp">
+
+                <ImageView
+                    android:layout_gravity="top"
+                    android:src="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"/>
+
+                <TextView
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="78dp"
+                    android:text="Tile 5"
+                    android:fontFamily="@font/productsansregular"
+                    android:textColor="@color/colorFont"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 </RelativeLayout>
