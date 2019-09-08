@@ -89,7 +89,7 @@
         android:id="@+id/settingsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="14dp"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
         android:paddingStart="26dp"

@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     active = fragment1
                     searchButton.visibility = View.GONE
+                    fab.show()
                     return@OnNavigationItemSelectedListener true
                 }
 
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     active = fragment2
                     searchButton.visibility = View.VISIBLE
+                    fab.hide()
                     return@OnNavigationItemSelectedListener true
                 }
 
@@ -53,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     active = fragment3
                     searchButton.visibility = View.GONE
+                    fab.hide()
                     return@OnNavigationItemSelectedListener true
                 }
             }

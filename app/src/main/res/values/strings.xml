@@ -31,4 +31,11 @@
     <string name="content_placeholder">this is content text</string>
     <string name="section_1">SECTION 1</string>
     <string name="section_2">SECTION 2</string>
+    <string name="category_1">Category 1</string>
+    <string name="catergory_2">Catergory 2</string>
+    <string name="category_3">Category 3</string>
+    <string name="category_4">Category 4</string>
+    <string name="category_5">Category 5</string>
+    <string name="category_6">Category 6</string>
+    <string name="category_7">Category 7</string>
 </resources>
