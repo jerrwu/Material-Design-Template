@@ -19,8 +19,8 @@
             <TextView
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textSize="18sp"
-                android:fontFamily="@font/productsansblack"
+                android:textSize="20sp"
+                android:fontFamily="@font/productsansmedium"
                 android:textColor="@color/colorSecondary"
                 android:text="@string/title_placeholder"
                 android:id="@+id/card_title"
