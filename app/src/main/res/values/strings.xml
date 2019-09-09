@@ -9,18 +9,6 @@
     <string name="menu_messages">Messages</string>
     <string name="dark_toggle_title">Dark Mode</string>
     <string name="dark_toggle_key">dark_toggle</string>
-    <string-array name="dark_mode">
-        <item>"Follow System Theme"</item>
-        <item>"Set by Battery Saver (Recommended)"</item>
-        <item>"On"</item>
-        <item>"Off"</item>
-    </string-array>
-    <string-array name="dark_mode_values">
-        <item>"-1"</item>
-        <item>"0"</item>
-        <item>"1"</item>
-        <item>"2"</item>
-    </string-array>
     <string name="dark_toggle_summary">Toggle dark mode for Template</string>
     <string name="save">Save</string>
     <string name="documentation">Documentation</string>
@@ -38,4 +26,17 @@
     <string name="category_5">Category 5</string>
     <string name="category_6">Category 6</string>
     <string name="category_7">Category 7</string>
+    <string name="search">Search</string>
+    <string-array name="dark_mode">
+        <item>"Follow System Theme"</item>
+        <item>"Set by Battery Saver (Recommended)"</item>
+        <item>"On"</item>
+        <item>"Off"</item>
+    </string-array>
+    <string-array name="dark_mode_values">
+        <item>"-1"</item>
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+    </string-array>
 </resources>

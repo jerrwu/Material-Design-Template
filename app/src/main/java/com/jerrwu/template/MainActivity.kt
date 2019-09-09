@@ -95,6 +95,11 @@ class MainActivity : AppCompatActivity() {
             showBottomSheetDialogFragment()
         }
 
+        searchButton.setOnClickListener {
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
+        }
+
         PreferenceManager
             .setDefaultValues(this, R.xml.preferences, false)
     }
