@@ -82,6 +82,7 @@
     </RelativeLayout>
 
     <androidx.appcompat.widget.Toolbar
+        android:theme="@style/ToolbarColored"
         android:layout_alignParentBottom="true"
         android:id="@+id/toolbar_new_bottom"
         android:layout_height="wrap_content"

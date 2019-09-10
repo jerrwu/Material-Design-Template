@@ -1,5 +1,8 @@
 package com.jerrwu.template
 
+import android.content.res.Configuration
+import android.graphics.Color
+import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -31,5 +34,15 @@ class NewActivity : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.activity_new_menu, menu)
         return true
+    }
+
+    private fun isUsingNightModeResources(): Boolean {
+        return when (resources.configuration.uiMode and
+                Configuration.UI_MODE_NIGHT_MASK) {
+            Configuration.UI_MODE_NIGHT_YES -> true
+            Configuration.UI_MODE_NIGHT_NO -> false
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> false
+            else -> false
+        }
     }
 }
