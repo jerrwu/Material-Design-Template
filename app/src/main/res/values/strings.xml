@@ -28,6 +28,10 @@
     <string name="category_7">Category 7</string>
     <string name="search">Search</string>
     <string name="no_results">No results</string>
+    <string name="create_new">New</string>
+    <string name="content">Content</string>
+    <string name="title">Title</string>
+    <string name="back">Back</string>
     <string-array name="dark_mode">
         <item>"Follow System Theme"</item>
         <item>"Set by Battery Saver (Recommended)"</item>

@@ -100,6 +100,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        fab.setOnClickListener {
+            val intent = Intent(this, NewActivity::class.java)
+            startActivity(intent)
+        }
+
         PreferenceManager
             .setDefaultValues(this, R.xml.preferences, false)
     }
