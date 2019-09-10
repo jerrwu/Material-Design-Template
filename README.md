@@ -14,4 +14,4 @@ TODO:
 
 - [ ] add greeting to home fragment
 
-- [ ] add activity for fab onclick
+- [x] add activity for fab onclick
