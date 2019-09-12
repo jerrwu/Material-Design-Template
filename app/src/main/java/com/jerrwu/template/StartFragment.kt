@@ -45,7 +45,7 @@ class StartFragment : Fragment() {
         for (i in 2..6) {
             val card = Card()
             card.id = i
-            card.ic = R.drawable.ic_plus
+            card.ic = R.drawable.dots_horizontal_circle_outline
             card.title = "Title $i"
             card.content = "this is text this is text this is text this is text this is text this is text this is text this is text this is text this is text this is text this is text "
             cardList.add(card)
