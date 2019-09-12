@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <androidx.preference.EditTextPreference
+        android:key="name"
+        android:title="Name"
+        android:defaultValue="User"/>
+
     <PreferenceCategory
         android:title="UI &amp; Behaviour">
 
@@ -11,11 +16,6 @@
             android:defaultValue="2"
             android:summary=""
             android:title="@string/dark_toggle_title" />
-
-        <androidx.preference.EditTextPreference
-            android:key="name"
-            android:title="Name"
-            android:defaultValue="User"/>
 
         <SwitchPreference
             android:key="bottomNavHide"
@@ -28,6 +28,14 @@
         android:title="Other">
 
         <Preference
+            android:key="editname"
+            android:title="Edit name">
+            <intent android:action="com.jerrwu.template.AccountActivity"/>
+            <intent android:targetPackage="com.jerrwu.template"
+                android:targetClass="com.jerrwu.template.AccountActivity"/>
+        </Preference>
+
+        <Preference
             android:key="github"
             android:title="Github"
             android:summary="Visit the Github repo for this project" />
@@ -36,14 +44,6 @@
             android:key="version"
             android:title="Template version"
             android:summary="" />
-
-        <Preference
-            android:key="editname"
-            android:title="Edit name">
-            <intent android:action="com.jerrwu.template.AccountActivity"/>
-            <intent android:targetPackage="com.jerrwu.template"
-                android:targetClass="com.jerrwu.template.AccountActivity"/>
-        </Preference>
     </PreferenceCategory>
 
 </PreferenceScreen>

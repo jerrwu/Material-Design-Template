@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                         .show(fragment1)
                         .commit()
                     active = fragment1
+                    fab.show()
                     searchButton.visibility = View.GONE
                     return@OnNavigationItemSelectedListener true
                 }
