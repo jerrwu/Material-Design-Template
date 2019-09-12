@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
                     active = fragment2
                     searchButton.visibility = View.VISIBLE
                     fab.hide()
-                    mainPaddingBottom.visibility = View.VISIBLE
                     return@OnNavigationItemSelectedListener true
                 }
 

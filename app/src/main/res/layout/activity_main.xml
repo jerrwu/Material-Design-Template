@@ -37,7 +37,6 @@
 
     </RelativeLayout>
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         android:id="@+id/fab"
@@ -51,55 +50,50 @@
         android:tint="@color/colorMain"
         app:srcCompat="@drawable/ic_plus" />
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarMain"
+    <androidx.appcompat.widget.Toolbar
+        android:minHeight="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:id="@+id/toolbar_top"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_gravity="top">
-        <androidx.appcompat.widget.Toolbar
-            android:layout_gravity="top"
-            android:id="@+id/toolbar_top"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:background="@color/colorMain">
+        android:elevation="1dp"
+        android:background="@color/colorMain">
 
-            <ImageButton
-                android:id="@+id/accountButton"
-                android:layout_gravity="end"
-                android:tint="@color/colorSecondary"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_account"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/account" />
+        <ImageButton
+            android:id="@+id/accountButton"
+            android:layout_gravity="end"
+            android:tint="@color/colorSecondary"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_account"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/account" />
 
-            <ImageButton
-                android:visibility="gone"
-                android:id="@+id/searchButton"
-                android:layout_gravity="start"
-                android:tint="@color/colorSecondary"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_magnify"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/account" />
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/searchButton"
+            android:layout_gravity="start"
+            android:tint="@color/colorSecondary"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_magnify"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/account" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_title"
-                android:textColor="@color/colorSecondary"
-                android:fontFamily="@font/productsansmedium"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:id="@+id/toolbar_title" />
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            android:textColor="@color/colorSecondary"
+            android:fontFamily="@font/productsansmedium"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_gravity="bottom"
