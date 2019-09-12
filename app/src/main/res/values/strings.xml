@@ -7,7 +7,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_search">Search</string>
     <string name="menu_messages">Messages</string>
-    <string name="dark_toggle_title">Dark Mode</string>
+    <string name="dark_toggle_title">Dark mode</string>
     <string name="dark_toggle_key">dark_toggle</string>
     <string name="dark_toggle_summary">Toggle dark mode for Template</string>
     <string name="save">Save</string>
@@ -20,7 +20,7 @@
     <string name="section_1">SECTION 1</string>
     <string name="section_2">SECTION 2</string>
     <string name="category_1">Category 1</string>
-    <string name="catergory_2">Catergory 2</string>
+    <string name="category_2">Category 2</string>
     <string name="category_3">Category 3</string>
     <string name="category_4">Category 4</string>
     <string name="category_5">Category 5</string>
@@ -32,6 +32,8 @@
     <string name="content">Content</string>
     <string name="title">Title</string>
     <string name="back">Back</string>
+    <string name="category_8">Category 8</string>
+    <string name="info">Info</string>
     <string-array name="dark_mode">
         <item>"Follow System Theme"</item>
         <item>"Set by Battery Saver (Recommended)"</item>

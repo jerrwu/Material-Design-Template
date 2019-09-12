@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_search" />
 
     <item
-        android:id="@+id/menu_messages"
-        android:title="@string/menu_messages"
+        android:id="@+id/menu_info"
+        android:title="@string/info"
         android:icon="@drawable/ic_message" />
 </menu>

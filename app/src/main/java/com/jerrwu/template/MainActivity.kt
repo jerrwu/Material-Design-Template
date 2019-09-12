@@ -1,25 +1,25 @@
 package com.jerrwu.template
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.nav_sheet.*
 
 
 class MainActivity : AppCompatActivity() {
-    val fragment1: Fragment = StartFragment()
-    val fragment2: Fragment = CentreFragment()
-    val fragment3: Fragment = EndFragment()
-    val navSheetFragment = NavSheetFragment()
-    val fm = supportFragmentManager
+    private val fragment1: Fragment = StartFragment()
+    private val fragment2: Fragment = CentreFragment()
+    private val fragment3: Fragment = EndFragment()
+    private val navSheetFragment = NavSheetFragment()
+    private val fm = supportFragmentManager
     var active = fragment1
 
     private val mOnNavigationItemSelectedListener =
@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     active = fragment1
                     searchButton.visibility = View.GONE
-                    fab.show()
                     return@OnNavigationItemSelectedListener true
                 }
 
@@ -45,10 +44,11 @@ class MainActivity : AppCompatActivity() {
                     active = fragment2
                     searchButton.visibility = View.VISIBLE
                     fab.hide()
+                    mainPaddingBottom.visibility = View.VISIBLE
                     return@OnNavigationItemSelectedListener true
                 }
 
-                R.id.menu_messages -> {
+                R.id.menu_info -> {
                     fm.beginTransaction()
                         .hide(active)
                         .show(fragment3)
@@ -66,6 +66,12 @@ class MainActivity : AppCompatActivity() {
         navSheetFragment.show(supportFragmentManager, navSheetFragment.tag)
     }
 
+    override fun onResume() {
+        super.onResume()
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        setLayoutNavScrollBehaviour(sharedPreferences)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
@@ -79,6 +85,8 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setLayoutNavScrollBehaviour(sharedPreferences)
 
         for (fragment in fm.fragments) {
             fm.beginTransaction().remove(fragment).commit()
@@ -107,6 +115,31 @@ class MainActivity : AppCompatActivity() {
 
         PreferenceManager
             .setDefaultValues(this, R.xml.preferences, false)
+    }
+
+    private fun setLayoutNavScrollBehaviour(sharedPreferences: SharedPreferences) {
+        val bottomNavToggle = sharedPreferences.getBoolean("bottomNavHide",false)
+        if (bottomNavToggle) {
+            enableLayoutNavScrollBehaviour()
+        } else {
+            disableLayoutNavScrollBehaviour()
+        }
+    }
+
+    private fun enableLayoutNavScrollBehaviour() {
+        val param1: CoordinatorLayout.LayoutParams = bottom_navigation.layoutParams as CoordinatorLayout.LayoutParams
+        param1.behavior = HideBottomViewOnScrollBehavior<CoordinatorLayout>()
+        val param2: CoordinatorLayout.LayoutParams = fab.layoutParams as CoordinatorLayout.LayoutParams
+        param2.behavior = HideBottomViewOnScrollBehavior<CoordinatorLayout>()
+        mainPaddingBottom.visibility = View.GONE
+    }
+
+    private fun disableLayoutNavScrollBehaviour() {
+        val param1: CoordinatorLayout.LayoutParams = bottom_navigation.layoutParams as CoordinatorLayout.LayoutParams
+        param1.behavior = null
+        val param2: CoordinatorLayout.LayoutParams = fab.layoutParams as CoordinatorLayout.LayoutParams
+        param2.behavior = null
+        mainPaddingBottom.visibility = View.VISIBLE
     }
 }
 
