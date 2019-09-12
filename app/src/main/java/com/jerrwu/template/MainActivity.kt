@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
+import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -70,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         setLayoutNavScrollBehaviour(sharedPreferences)
+        setLayoutToolbarScrollBehaviour(sharedPreferences)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setLayoutNavScrollBehaviour(sharedPreferences)
+        setLayoutToolbarScrollBehaviour(sharedPreferences)
 
         for (fragment in fm.fragments) {
             fm.beginTransaction().remove(fragment).commit()
@@ -140,6 +143,28 @@ class MainActivity : AppCompatActivity() {
         val param2: CoordinatorLayout.LayoutParams = fab.layoutParams as CoordinatorLayout.LayoutParams
         param2.behavior = null
         mainPaddingBottom.visibility = View.VISIBLE
+    }
+
+    private fun setLayoutToolbarScrollBehaviour(sharedPreferences: SharedPreferences) {
+        val appBarToggle = sharedPreferences.getBoolean("appBarHide",false)
+        if (appBarToggle) {
+            enableLayoutToolbarScrollBehaviour()
+        } else {
+            disableLayoutToolbarScrollBehaviour()
+        }
+    }
+
+    private fun enableLayoutToolbarScrollBehaviour() {
+        val param: AppBarLayout.LayoutParams = toolbar_top.layoutParams as AppBarLayout.LayoutParams
+        param.scrollFlags =
+            AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL or AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
+        mainPaddingTop.visibility = View.GONE
+    }
+
+    private fun disableLayoutToolbarScrollBehaviour() {
+        val param: AppBarLayout.LayoutParams = toolbar_top.layoutParams as AppBarLayout.LayoutParams
+        param.scrollFlags = 0
+        mainPaddingTop.visibility = View.VISIBLE
     }
 }
 

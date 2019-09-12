@@ -22,6 +22,11 @@
             android:title="Hide navigation bar on scroll"
             android:defaultValue="false"/>
 
+        <SwitchPreference
+            android:key="appBarHide"
+            android:title="Hide toolbar on scroll"
+            android:defaultValue="false"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
