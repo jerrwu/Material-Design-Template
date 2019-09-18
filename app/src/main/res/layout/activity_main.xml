@@ -6,11 +6,38 @@
     android:id="@+id/mainLayout"
     android:background="@color/colorMain"
     android:clipChildren="false"
-    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <include layout="@layout/content_main"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_alignParentTop="true"
+            android:id="@+id/mainPaddingTop"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <FrameLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_below="@id/mainPaddingTop"
+            android:layout_above="@id/mainPaddingBottom"
+            android:id="@+id/frag_container"
+            android:clipToPadding="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/mainPaddingBottom"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -26,17 +53,18 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:minHeight="?attr/actionBarSize"
+        android:elevation="10dp"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_gravity="top"
         app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll"
             android:layout_gravity="top"
             android:id="@+id/toolbar_top"
             android:elevation="2dp"
-            android:layout_height="match_parent"
+            android:layout_height="?attr/actionBarSize"
             android:layout_width="match_parent"
             android:background="@color/colorMain">
 
@@ -89,4 +117,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_items" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
