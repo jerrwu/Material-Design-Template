@@ -90,7 +90,7 @@
         android:minHeight="?attr/actionBarSize"
         android:elevation="12dp"
         android:backgroundTint="@color/colorMain"
-        android:background="@drawable/rounded_dialog_box">
+        android:background="@drawable/rounded_bottom_sheet">
 
         <ImageButton
             android:id="@+id/imageAddButton"

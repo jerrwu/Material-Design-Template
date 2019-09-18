@@ -34,6 +34,8 @@
     <string name="back">Back</string>
     <string name="category_8">Category 8</string>
     <string name="info">Info</string>
+    <string name="button_yes">yes</string>
+    <string name="button_no">no</string>
     <string-array name="dark_mode">
         <item>"Follow System Theme"</item>
         <item>"Set by Battery Saver (Recommended)"</item>

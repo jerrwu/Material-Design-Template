@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingTop="24dp"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingBottom="14dp"
+    android:layout_height="200dp">
+
+    <TextView
+        android:id="@+id/dialogueBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hie..."
+        android:textSize="18sp"
+        android:textColor="@color/colorFont"
+        android:fontFamily="@font/productsansregular"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        android:id="@+id/yesBtn"
+        android:fontFamily="@font/productsansmedium"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_yes"
+        android:textColor="@color/red"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        android:id="@+id/noBtn"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/productsansmedium"
+        android:layout_toStartOf="@+id/yesBtn"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_no"
+        android:textColor="@color/colorAccent"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
