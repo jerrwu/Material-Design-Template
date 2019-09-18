@@ -40,7 +40,7 @@
         <item name="android:background">@drawable/rounded_bottom_sheet</item>
     </style>
 
-    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
+    <style name="DialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
