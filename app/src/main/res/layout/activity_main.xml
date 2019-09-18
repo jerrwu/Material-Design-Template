@@ -10,38 +10,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <View
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:layout_alignParentTop="true"
-            android:id="@+id/mainPaddingTop"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/>
-
-        <FrameLayout
-            android:layout_below="@id/mainPaddingTop"
-            android:layout_above="@id/mainPaddingBottom"
-            android:id="@+id/frag_container"
-            android:clipToPadding="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <View
-            android:visibility="visible"
-            android:layout_alignParentBottom="true"
-            android:id="@+id/mainPaddingBottom"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/>
-
-    </RelativeLayout>
+    <include layout="@layout/content_main"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         android:id="@+id/fab"
         android:layout_marginBottom="74dp"
         android:layout_gravity="end|bottom"
@@ -109,7 +80,6 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_gravity="bottom"
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         android:theme="@style/Widget.BottomNavigationView"
         android:background="@color/bottomNavColor"
         app:itemIconTint="@drawable/navbar_color_selector"
