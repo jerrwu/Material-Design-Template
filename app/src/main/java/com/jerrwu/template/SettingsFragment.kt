@@ -68,7 +68,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
             else if (key == "bottomNavHide") {
                 InfoHelper.showDialog("An app restart is recommended after changing this setting.",
-                    "OK", "", activity!!)
+                    "", "OK", activity!!)
             }
         }
 }

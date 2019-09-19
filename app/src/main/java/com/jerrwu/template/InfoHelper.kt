@@ -52,6 +52,7 @@ object InfoHelper {
         yesBtn.text = textYes
         val noBtn = dialog.findViewById(R.id.noBtn) as Button
         noBtn.text = textNo
+        if (textYes == "") { yesBtn.visibility = View.GONE }
         yesBtn.setOnClickListener {
             dialog.dismiss()
         }
