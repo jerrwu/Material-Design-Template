@@ -73,5 +73,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 InfoHelper.showDialog("An app restart is recommended after changing this setting.",
                     "", "OK", this.context!!)
             }
+            else if (key == "appBarHide") {
+                InfoHelper.showDialog("An app restart is recommended after changing this setting.",
+                    "", "OK", this.context!!)
+            }
         }
 }
