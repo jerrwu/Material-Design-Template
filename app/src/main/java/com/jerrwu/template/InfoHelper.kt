@@ -26,7 +26,7 @@ object InfoHelper {
             in 13 downTo 11 -> "It's lunch time!"
             in 17 downTo 14 -> "Enjoy a beautiful afternoon!"
             in 21 downTo 18 -> "Have a wonderful evening!"
-            in 24 downTo 23 -> "It's getting late!"
+            in 24 downTo 22 -> "It's getting late!"
             else -> "hie..."
         }
     }
