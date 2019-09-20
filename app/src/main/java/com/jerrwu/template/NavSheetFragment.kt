@@ -1,6 +1,5 @@
 package com.jerrwu.template
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.nav_sheet.*
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
 import android.net.Uri
 import android.preference.PreferenceManager
-import android.util.Log
-import android.view.ViewConfiguration
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import java.time.LocalDateTime

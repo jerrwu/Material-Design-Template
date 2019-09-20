@@ -18,6 +18,11 @@
             android:title="@string/dark_toggle_title" />
 
         <SwitchPreference
+            android:key="greetings"
+            android:title="Show greetings"
+            android:defaultValue="true"/>
+
+        <SwitchPreference
             android:key="bottomNavHide"
             android:title="Hide navigation bar on scroll"
             android:defaultValue="false"/>
