@@ -41,7 +41,7 @@ object InfoHelper {
         return true
     }
 
-    fun showDialog(title: String, textYes: String, textNo: String, activity: Activity) {
+    fun showDialog(title: String, textYes: String, textNo: String, activity: Context) {
         val dialog = Dialog(activity, R.style.DialogTheme)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)

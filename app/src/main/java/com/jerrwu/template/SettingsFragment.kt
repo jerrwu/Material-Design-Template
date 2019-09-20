@@ -4,6 +4,8 @@ package com.jerrwu.template
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
 
@@ -67,8 +69,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 }
             }
             else if (key == "bottomNavHide") {
+                if (this.context == null) { Log.d("jerrdebug","uh oh!") }
                 InfoHelper.showDialog("An app restart is recommended after changing this setting.",
-                    "", "OK", activity!!)
+                    "", "OK", this.context!!)
             }
         }
 }

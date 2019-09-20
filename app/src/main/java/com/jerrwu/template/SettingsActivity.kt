@@ -9,12 +9,15 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        val settingsFragment = SettingsFragment()
+        settingsFragment.retainInstance = true
+
         settingsBackButton.setOnClickListener {
             finish()
         }
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.settingsFrame, SettingsFragment())
+            .replace(R.id.settingsFrame, settingsFragment)
             .commit()
     }
 }
