@@ -1,15 +1,26 @@
 package com.jerrwu.template
 
 
+import android.app.Activity
+import android.content.Context
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
+import android.content.Intent
+import android.view.View
 
 
 class SettingsFragment : PreferenceFragmentCompat() {
+    private var mActivity: Activity? = null
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        if (mActivity == null) {
+            mActivity = this.activity!!
+        }
+    }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
@@ -43,7 +54,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     }
 
-    var onPreferenceChangeListener: SharedPreferences.OnSharedPreferenceChangeListener =
+    private var onPreferenceChangeListener: SharedPreferences.OnSharedPreferenceChangeListener =
         SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->
             if (key == "dark_toggle") {
                 val darkPreference = findPreference(key) as ListPreference?
@@ -68,13 +79,12 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 }
             }
             else if (key == "bottomNavHide") {
-                if (this.context == null) { Log.d("jerrdebug","uh oh!") }
-                InfoHelper.showDialog("An app restart is recommended after changing this setting.",
-                    "", "OK", this.context!!)
+                val intent = Intent("TOGGLE_DIALOG_KEY")
+                mActivity!!.sendBroadcast(intent)
             }
             else if (key == "appBarHide") {
-                InfoHelper.showDialog("An app restart is recommended after changing this setting.",
-                    "", "OK", this.context!!)
+                val intent = Intent("TOGGLE_DIALOG_KEY")
+                mActivity!!.sendBroadcast(intent)
             }
         }
 }

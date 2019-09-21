@@ -11,11 +11,9 @@ import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.core.content.ContextCompat.startActivity
 import android.content.Intent
 import android.app.AlarmManager
-import android.content.Context.ALARM_SERVICE
-import androidx.core.content.ContextCompat.getSystemService
-import android.app.PendingIntent
 import android.content.Context
-import kotlin.system.exitProcess
+import androidx.core.content.ContextCompat.startActivity
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 
 
 object InfoHelper {
@@ -41,7 +39,8 @@ object InfoHelper {
         return true
     }
 
-    fun showDialog(title: String, textYes: String, textNo: String, activity: Context) {
+    fun showDialog(title: String, textYes: String, textNo: String, activity: Context,
+                   funYes: (funContext: Context) -> Unit, funNo: (funDialog: Dialog) -> Unit) {
         val dialog = Dialog(activity, R.style.DialogTheme)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
@@ -53,11 +52,24 @@ object InfoHelper {
         val noBtn = dialog.findViewById(R.id.noBtn) as Button
         noBtn.text = textNo
         if (textYes == "") { yesBtn.visibility = View.GONE }
-        yesBtn.setOnClickListener {
-            dialog.dismiss()
-        }
-        noBtn.setOnClickListener { dialog.dismiss() }
+        yesBtn.setOnClickListener { funYes(activity) }
+        noBtn.setOnClickListener { funNo(dialog) }
         dialog.show()
+    }
 
+    fun restartApp(context: Context) {
+        val intent = Intent(context, SettingsActivity::class.java)
+        intent.addFlags(FLAG_ACTIVITY_NEW_TASK)
+        intent.putExtra("RESTART_INTENT", MainActivity::class.java)
+        context.startActivity(intent)
+        if (context is Activity) {
+            context.finish()
+        }
+
+        Runtime.getRuntime().exit(0)
+    }
+
+    fun dismissDialog(dialog: Dialog) {
+        dialog.dismiss()
     }
 }
