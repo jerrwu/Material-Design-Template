@@ -66,6 +66,6 @@
 
     <style name="AppTheme.DialogTitleTextAppearance" parent="@android:style/TextAppearance.DialogWindowTitle">
         <item name="android:fontFamily">@font/productsansregular</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 </resources>

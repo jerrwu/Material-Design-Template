@@ -6,8 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:navigationBarColor">@color/colorPrimary</item>
-        <item name="android:statusBarColor">@color/colorText</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/colorMain</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:colorEdgeEffect">@color/colorSecondary</item>
         <item name="alertDialogTheme">@style/AppTheme.DialogTheme</item>
