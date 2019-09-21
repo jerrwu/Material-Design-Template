@@ -17,6 +17,7 @@ import java.time.format.DateTimeFormatter
 
 class NavSheetFragment : BottomSheetDialogFragment() {
     private var fragmentView: View? = null
+    private var greetingString = ""
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -41,10 +42,17 @@ class NavSheetFragment : BottomSheetDialogFragment() {
         val nameString = prefs.getString("name", "User")
         bottom_sheet_account_text_1.text = nameString
 
-        val current = LocalDateTime.now()
-        val formatter = DateTimeFormatter.ofPattern("HH")
-        val curHour: String =  current.format(formatter)
-        val greetingString = InfoHelper.getGreeting(curHour)
+        val greetingsToggle = prefs.getBoolean("greetings", true)
+        if (greetingsToggle) {
+            val current = LocalDateTime.now()
+            val formatter = DateTimeFormatter.ofPattern("HH")
+            val curHour: String =  current.format(formatter)
+            greetingString = InfoHelper.getGreeting(curHour)
+            bottom_sheet_account_text_2.visibility = View.VISIBLE
+        } else {
+            greetingString = ""
+            bottom_sheet_account_text_2.visibility = View.GONE
+        }
 
         bottom_sheet_account_text_2.text = greetingString
 
@@ -55,9 +63,11 @@ class NavSheetFragment : BottomSheetDialogFragment() {
         }
 
         docButton.setOnClickListener {
-            val uri = Uri.parse("https://github.com/jerrwu/Material-Design-Template/blob/master/README.md")
+            val uri = Uri.parse(
+                "https://github.com/jerrwu/Material-Design-Template/blob/master/README.md")
             val intentBuilder = CustomTabsIntent.Builder()
-            intentBuilder.setToolbarColor(context.let { ContextCompat.getColor(it!!, R.color.colorPrimary) })
+            intentBuilder.setToolbarColor(
+                context.let { ContextCompat.getColor(it!!, R.color.colorPrimary) })
             intentBuilder.setShowTitle(true)
             val customTabsIntent = intentBuilder.build()
             customTabsIntent.launchUrl(activity, uri)
@@ -65,9 +75,11 @@ class NavSheetFragment : BottomSheetDialogFragment() {
         }
 
         helpButton.setOnClickListener {
-            val uri = Uri.parse("https://github.com/jerrwu/Material-Design-Template/issues")
+            val uri = Uri.parse(
+                "https://github.com/jerrwu/Material-Design-Template/issues")
             val intentBuilder = CustomTabsIntent.Builder()
-            intentBuilder.setToolbarColor(context.let { ContextCompat.getColor(it!!, R.color.colorPrimary) })
+            intentBuilder.setToolbarColor(
+                context.let { ContextCompat.getColor(it!!, R.color.colorPrimary) })
             intentBuilder.setShowTitle(true)
             val customTabsIntent = intentBuilder.build()
             customTabsIntent.launchUrl(activity, uri)

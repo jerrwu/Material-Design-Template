@@ -2,7 +2,6 @@ package com.jerrwu.template
 
 
 import android.app.Activity
-import android.content.Context
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
