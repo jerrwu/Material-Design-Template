@@ -2,12 +2,14 @@ package com.jerrwu.template
 
 
 import android.app.Activity
+import android.app.Application
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
 import android.content.Intent
+import android.content.res.Configuration
 import android.view.View
 
 
