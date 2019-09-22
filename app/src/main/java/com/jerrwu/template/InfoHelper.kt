@@ -7,13 +7,9 @@ import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.app.ActivityCompat.finishAffinity
-import androidx.core.content.ContextCompat.startActivity
 import android.content.Intent
 import android.app.AlarmManager
 import android.content.Context
-import androidx.core.content.ContextCompat.startActivity
-import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 
 
 object InfoHelper {
@@ -58,9 +54,8 @@ object InfoHelper {
     }
 
     fun restartApp(context: Context) {
-        val intent = Intent(context, SettingsActivity::class.java)
-        intent.addFlags(FLAG_ACTIVITY_NEW_TASK)
-        intent.putExtra("RESTART_INTENT", MainActivity::class.java)
+        val intent = Intent(context, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         context.startActivity(intent)
         if (context is Activity) {
             context.finish()
