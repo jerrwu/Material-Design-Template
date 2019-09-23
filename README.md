@@ -6,12 +6,12 @@ TODO:
 
 - [x] add search screen
 
-- [ ] improve theming and tab switching
+- [x] improve theming and tab switching
 
-- [ ] add splash to not blind people when in dark mode
+- [x] add splash to not blind people when in dark mode
 
 - [ ] add content to third fragment
 
-- [ ] add greeting to home fragment
+- [x] add greeting to home fragment
 
 - [x] add activity for fab onclick
