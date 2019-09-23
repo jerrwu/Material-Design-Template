@@ -49,4 +49,12 @@
         <item>"1"</item>
         <item>"2"</item>
     </string-array>
+    <string name="github_link_readme">
+        "https://github.com/jerrwu/Material-Design-Template/blob/master/README.md"</string>
+    <string name="github_link_issues">
+        "https://github.com/jerrwu/Material-Design-Template/issues"
+    </string>
+    <string name="github_link_main">
+        "https://github.com/jerrwu/Material-Design-Template"
+    </string>
 </resources>

@@ -48,7 +48,11 @@
         <Preference
             android:key="github"
             android:title="Github"
-            android:summary="Visit the Github repo for this project" />
+            android:summary="Visit the Github repo for this project">
+            <intent android:action="com.jerrwu.template.GithubTabActivity"/>
+            <intent android:targetPackage="com.jerrwu.template"
+                android:targetClass="com.jerrwu.template.GithubTabActivity"/>
+        </Preference>
 
         <Preference
             android:key="version"

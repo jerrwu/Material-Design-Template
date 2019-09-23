@@ -63,8 +63,7 @@ class NavSheetFragment : BottomSheetDialogFragment() {
         }
 
         docButton.setOnClickListener {
-            val uri = Uri.parse(
-                "https://github.com/jerrwu/Material-Design-Template/blob/master/README.md")
+            val uri = Uri.parse(getString(R.string.github_link_readme))
             val intentBuilder = CustomTabsIntent.Builder()
             intentBuilder.setToolbarColor(
                 context.let { ContextCompat.getColor(it!!, R.color.colorPrimary) })
@@ -75,8 +74,7 @@ class NavSheetFragment : BottomSheetDialogFragment() {
         }
 
         helpButton.setOnClickListener {
-            val uri = Uri.parse(
-                "https://github.com/jerrwu/Material-Design-Template/issues")
+            val uri = Uri.parse(getString(R.string.github_link_issues))
             val intentBuilder = CustomTabsIntent.Builder()
             intentBuilder.setToolbarColor(
                 context.let { ContextCompat.getColor(it!!, R.color.colorPrimary) })
