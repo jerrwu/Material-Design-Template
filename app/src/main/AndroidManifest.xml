@@ -11,7 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".GithubTabActivity"></activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GithubTabActivity" />
         <activity android:name=".NewActivity" />
         <activity android:name=".SearchActivity" />
         <activity
@@ -28,11 +35,6 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|screenLayout">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

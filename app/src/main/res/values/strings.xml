@@ -37,6 +37,14 @@
     <string name="info">Info</string>
     <string name="button_yes">yes</string>
     <string name="button_no">no</string>
+    <string name="github_link_readme">
+        "https://github.com/jerrwu/Material-Design-Template/blob/master/README.md"</string>
+    <string name="github_link_issues">
+        "https://github.com/jerrwu/Material-Design-Template/issues"
+    </string>
+    <string name="github_link_main">
+        "https://github.com/jerrwu/Material-Design-Template"
+    </string>
     <string-array name="dark_mode">
         <item>"Follow System Theme"</item>
         <item>"Set by Battery Saver"</item>
@@ -49,12 +57,4 @@
         <item>"1"</item>
         <item>"2"</item>
     </string-array>
-    <string name="github_link_readme">
-        "https://github.com/jerrwu/Material-Design-Template/blob/master/README.md"</string>
-    <string name="github_link_issues">
-        "https://github.com/jerrwu/Material-Design-Template/issues"
-    </string>
-    <string name="github_link_main">
-        "https://github.com/jerrwu/Material-Design-Template"
-    </string>
 </resources>
