@@ -45,6 +45,7 @@
     <string name="github_link_main">
         "https://github.com/jerrwu/Material-Design-Template"
     </string>
+    <string name="selection">Selection</string>
     <string-array name="dark_mode">
         <item>"Follow System Theme"</item>
         <item>"Set by Battery Saver"</item>

@@ -3,15 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
     tools:context=".EndFragment">
 
-    <TextView
-        android:text="@string/fragment_3_placeholder"
-        android:fontFamily="@font/productsansblack"
-        android:textSize="42sp"
-        android:textColor="@color/colorSecondary"
-        android:layout_centerInParent="true"
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="18dp"
+        android:elevation="5dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/colorMain"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_marginStart="4dp"
+            android:elevation="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_chevron_left"
+            android:layout_width="30dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:fontFamily="@font/productsansregular"
+            android:textSize="16sp"
+            android:textColor="@color/colorFont"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="@string/selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:layout_marginEnd="4dp"
+            android:elevation="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_chevron_right"
+            android:layout_width="30dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
