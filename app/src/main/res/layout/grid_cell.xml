@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:id="@+id/grid_cell"
+    android:gravity="start|bottom"
+    android:padding="4dp"
+    android:background="@color/colorMain">
+
+    <TextView
+        android:textColor="@color/colorFont"
+        android:textSize="14sp"
+        android:fontFamily="@font/productsansmedium"
+        android:text="test"
+        android:id="@+id/gridCellText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
