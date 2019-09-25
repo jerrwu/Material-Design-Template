@@ -6,7 +6,7 @@
     android:focusable="true"
     android:id="@+id/grid_cell"
     android:gravity="center"
-    android:backgroundTint="@color/colorMain"
+    android:backgroundTint="@color/colorButton"
     android:background="@drawable/round_less_button_ripple">
 
     <TextView

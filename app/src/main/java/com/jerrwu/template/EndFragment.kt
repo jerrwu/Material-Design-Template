@@ -29,6 +29,7 @@ class EndFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        cellList.add(Cell("0"))
         cellList.add(Cell("1"))
         cellList.add(Cell("2"))
         cellList.add(Cell("3"))
@@ -40,6 +41,13 @@ class EndFragment : Fragment() {
         cellList.add(Cell("9"))
         cellList.add(Cell("10"))
         cellList.add(Cell("11"))
+        cellList.add(Cell("h"))
+        cellList.add(Cell("e"))
+        cellList.add(Cell("h"))
+        cellList.add(Cell("e"))
+        cellList.add(Cell("l"))
+        cellList.add(Cell("i"))
+        cellList.add(Cell("x"))
         adapter = CellAdapter(context!!, cellList)
 
         grid_view_main.adapter = adapter
@@ -71,7 +79,11 @@ class EndFragment : Fragment() {
 
             var inflater = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             var cellView = inflater.inflate(R.layout.grid_cell, parent, false)
-            cellView.gridCellText.text = cell.text!!
+            if (cell.text == "0") {
+                cellView.gridCellText.text = ""
+            } else {
+                cellView.gridCellText.text = cell.text!!
+            }
 
             return cellView
         }
