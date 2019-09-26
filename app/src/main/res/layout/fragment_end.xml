@@ -17,11 +17,12 @@
         android:clickable="true"
         android:focusable="true"
         android:background="@drawable/round_button_ripple"
-        android:backgroundTint="@color/colorMain"
+        android:backgroundTint="@color/colorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <ImageButton
+            android:id="@+id/fragmentEndSelectionBtn1"
             android:layout_marginStart="4dp"
             android:elevation="5dp"
             android:layout_gravity="center_vertical"
@@ -32,6 +33,7 @@
             android:layout_height="40dp"/>
 
         <TextView
+            android:id="@+id/fragmentEndSelectionText"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:fontFamily="@font/productsansregular"
@@ -44,6 +46,7 @@
             android:layout_height="wrap_content"/>
 
         <ImageButton
+            android:id="@+id/fragmentEndSelectionBtn2"
             android:layout_marginEnd="4dp"
             android:elevation="5dp"
             android:layout_gravity="center_vertical"
