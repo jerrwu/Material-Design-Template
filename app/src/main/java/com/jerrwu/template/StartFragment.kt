@@ -1,7 +1,9 @@
 package com.jerrwu.template
 
 
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,12 +12,22 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_start.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 class StartFragment : Fragment() {
     private var mRecyclerView: RecyclerView? = null
     private var mAdapter: RecyclerView.Adapter<*>? = null
     var cardList: ArrayList<Card> = ArrayList()
+
+    override fun onResume() {
+        super.onResume()
+        val prefs = PreferenceManager.getDefaultSharedPreferences(activity)
+        setInfoCardGreeting(prefs)
+        setInfoCardName(prefs)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +39,11 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val prefs = PreferenceManager.getDefaultSharedPreferences(activity)
+
+        setInfoCardGreeting(prefs)
+        setInfoCardName(prefs)
 
         var card1 = Card()
         card1.id = 0
@@ -59,6 +76,27 @@ class StartFragment : Fragment() {
         (mAdapter as CardAdapter).onItemClick = { card ->
             Toast.makeText(activity, card.id.toString(), Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun setInfoCardGreeting(prefs: SharedPreferences) {
+        val greetingString: String?
+        val greetingsToggle = prefs.getBoolean("greetings", true)
+        if (greetingsToggle) {
+            val current = LocalDateTime.now()
+            val formatter = DateTimeFormatter.ofPattern("HH")
+            val curHour: String =  current.format(formatter)
+            greetingString = InfoHelper.getGreeting(curHour)
+            infoCardGreeting.visibility = View.VISIBLE
+        } else {
+            greetingString = ""
+            infoCardGreeting.visibility = View.GONE
+        }
+        infoCardGreeting.text = greetingString.replace("!",",")
+    }
+
+    private fun setInfoCardName(prefs: SharedPreferences) {
+        val nameString: String? = prefs.getString("name", "user")
+        infoCardName.text = nameString
     }
 
 }
