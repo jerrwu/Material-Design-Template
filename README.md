@@ -10,7 +10,9 @@ TODO:
 
 - [x] add splash to not blind people when in dark mode
 
-- [ ] add content to third fragment
+- [x] add content to third fragment
+
+- [ ] enhance scrolling
 
 - [x] add greeting to home fragment
 
